@@ -48,7 +48,9 @@ select table_name from information_schema.tables where table_type='base table' l
 18. 악성 스크립트 XSS, CSRF
 
 `<img src="#" onmouseover="alert(1);">
+
 <img src="#" onerror="alert(1);">
+
 <img onclick='var a="aler"+"t(al"+"ert"+"(1));";eval(a);'>`
 19. 악성 콘텐츠 html
 20. 웹페이지 오류정보 처리
