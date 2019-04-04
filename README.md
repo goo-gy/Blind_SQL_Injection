@@ -24,8 +24,20 @@ select top 1 [Column Name] from [Table Name] <br>
 select table_name from information_schema.tables where table_type='base table' limit 0,1 <br>
                                                                                      ㄴ> 0번 째 테이블 <br>
   
+-----------------------------------------------------------------------------------
+<Oracle><br>
+
+select DISTINCT owner FROM all_tables;
+
+select table_name from all_tables;
+
+select column_name from all_tab_columns where table_name='[table name]';
 
 
+Row 갯수 파악
+
+Limit 기능
+select * from (select rownum rnum, users.* from users) A where A.rnum between 1 and 3
 
 -----------------------------------------------------------------------------------
 1. 관리자페이지 접근통제 및 계정관리
