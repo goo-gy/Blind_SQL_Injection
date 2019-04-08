@@ -18,6 +18,7 @@ select top 1 [Column Name] from [Table Name] <br>
 <br>
 <br>
 <h2>[MySQL]</h2> <br>
+# Shape
 ???' and ascii(substring((query), 1, 1)) > 'a'# <br>
 <br>
 # Get Table Name <br>
@@ -26,13 +27,16 @@ select table_name from information_schema.tables where table_type='base table' l
   
 -----------------------------------------------------------------------------------
 <h2>[Oracle]</h2><br>
-
+# Shape
 and (ascii(SUBSTR(select username from all_users where rownum = 1),1,1))) > 1
 
+# Get DB name <br>
 select DISTINCT owner FROM all_tables;
 
+# Get Table name <br>
 select table_name from all_tables;
 
+# Get Column name <br>
 select column_name from all_tab_columns where table_name='[table name]';
 
 
