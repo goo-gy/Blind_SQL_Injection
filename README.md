@@ -1,7 +1,6 @@
 <h2>[MS-SQL]</h2> <br>
 # Shape <br>
-//' and substring((query), 1, 1) < 'a'--<br>
-???' and substring((query), 1, 1) < 'a'--<br>
+??' and substring((query), 1, 1) < 'a'--<br>
 <br>
 # get DB NAME <br>
 db_name() <br>
