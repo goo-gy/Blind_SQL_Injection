@@ -24,8 +24,9 @@ select top 1 [Column Name] from [Table Name] <br>
 # Get Table Name <br>
 select table_name from information_schema.tables where table_type='base table' limit 0,1 <br>
                                                                                      ㄴ> 0번 째 테이블 <br>
-  
------------------------------------------------------------------------------------
+<br>
+<br>
+<br>
 <h2>[Oracle]</h2> <br>
 #Shape <br>
 and (ascii(SUBSTR(select username from all_users where rownum = 1),1,1))) > 1<br>
