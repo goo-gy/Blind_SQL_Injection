@@ -1,4 +1,4 @@
-<MS-SQL> <br>
+[MS-SQL] <br>
 #Shape <br>
 select * from board where Title='//' and substring((query), 1, 1) < 'a'--<br>
 ???' and substring((query), 1, 1) < 'a'--<br>
@@ -17,7 +17,7 @@ select top 1 [Column Name] from [Table Name] <br>
 <br>
 <br>
 <br>
-<MySQL> <br>
+[MySQL] <br>
 ???' and ascii(substring((query), 1, 1)) > 'a'# <br>
 <br>
 #Get Table Name <br>
@@ -25,7 +25,7 @@ select table_name from information_schema.tables where table_type='base table' l
                                                                                      ㄴ> 0번 째 테이블 <br>
   
 -----------------------------------------------------------------------------------
-<Oracle><br>
+[Oracle]<br>
 
 select DISTINCT owner FROM all_tables;
 
