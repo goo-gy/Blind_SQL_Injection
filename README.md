@@ -27,6 +27,8 @@ select table_name from information_schema.tables where table_type='base table' l
 -----------------------------------------------------------------------------------
 [Oracle]<br>
 
+and (ascii(SUBSTR(select username from all_users where rownum = 1),1,1))) > 1
+
 select DISTINCT owner FROM all_tables;
 
 select table_name from all_tables;
