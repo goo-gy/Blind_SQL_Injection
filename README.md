@@ -28,18 +28,18 @@ select table_name from information_schema.tables where table_type='base table' l
 -----------------------------------------------------------------------------------
 <h2>[Oracle]</h2> <br>
 #Shape <br>
-and (ascii(SUBSTR(select username from all_users where rownum = 1),1,1))) > 1
-
+and (ascii(SUBSTR(select username from all_users where rownum = 1),1,1))) > 1<br>
+<br>
 #Get DB name <br>
-select DISTINCT owner FROM all_tables;
-
+select DISTINCT owner FROM all_tables;<br>
+<br>
 #Get Table name <br>
-select table_name from all_tables;
-
+select table_name from all_tables;<br>
+<br>
 #Get Column name <br>
-select column_name from all_tab_columns where table_name='[table name]';
+select column_name from all_tab_columns where table_name='[table name]';<br>
 
-
+-----------------------------------------------------------------------------------
 Row 갯수 파악
 
 Limit 기능
