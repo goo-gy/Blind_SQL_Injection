@@ -1,7 +1,7 @@
 <h2>[MS-SQL]</h2>  
 # Shape  
 ``` sql
-??' and substring((query), 1, 1) < 'a'--
+??' and substring((query), 1, 1) < 'a'--  
 ```  
 
 # get DB NAME  
@@ -9,7 +9,7 @@ db_name()
   
 # Get Table name  
 ``` sql
-select top 1 name from sysobjects where xtype='U'
+select top 1 name from sysobjects where xtype='U'  
 ```
 
 # Get Column name  
@@ -62,7 +62,9 @@ select column_name from all_tab_columns where table_name='[table name]';
 Row 갯수 파악
 
 Limit 기능
-select * from (select rownum rnum, users.* from users) A where A.rnum between 1 and 3
+``` sql
+select * from (select rownum rnum, users.* from users) A where A.rnum between 1 and 3  
+```
 
 -----------------------------------------------------------------------------------
 1. 관리자페이지 접근통제 및 계정관리
